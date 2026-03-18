@@ -2,12 +2,10 @@
 $user_id = $_SESSION['user_id'];
 $is_admin = (isset($_SESSION['role']) && $_SESSION['role'] == 'admin');
 
-// Skicka en ny kommentar/svar
 if (isset($_POST['send_comment'])) {
     $text = test_input($_POST['comment_content']); // Innehållet från formuläret
     $receiver = $_POST['receiver_id']; // Vem som ska få kommentaren
     
-    // Vi använder tabellen 'comment' och kolumnen 'comment' som i din bild
     $sql = "INSERT INTO comment (sender_id, comment, receiver_id) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$user_id, $text, $receiver]);

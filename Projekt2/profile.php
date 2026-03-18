@@ -25,7 +25,6 @@
 
         </section>
 
-        <!-- Footern innehåller t.ex. somelänkar och kontaktuppg -->
         <footer>
             Made by Dennis<sup>&#169;</sup>
         </footer>

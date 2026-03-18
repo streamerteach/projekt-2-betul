@@ -1,7 +1,7 @@
 <?php 
 include "handy_methods.php"; 
 
-// Detta räcker! Ta bort det andra blocket längre ner.
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }

@@ -1,7 +1,6 @@
 <?php
 $user_id = $_SESSION['user_id'];
 
-// Uppdatera profil
 if (isset($_POST['update'])) {
     $realname = test_input($_POST['realname']);
     $bio = test_input($_POST['bio']);
@@ -11,7 +10,6 @@ if (isset($_POST['update'])) {
     echo "Profil uppdaterad!";
 }
 
-// Ta bort profil (Uppgift 4)
 if (isset($_POST['delete_account'])) {
     $password = $_POST['confirm_password'];
     $sql = "SELECT passhash FROM profiles WHERE id = ?";
@@ -29,7 +27,6 @@ if (isset($_POST['delete_account'])) {
     }
 }
 
-// Hämta aktuell info
 $stmt = $conn->prepare("SELECT * FROM profiles WHERE id = ?");
 $stmt->execute([$user_id]);
 $row = $stmt->fetch();

@@ -1,14 +1,12 @@
 <?php 
 include "handy_methods.php"; 
-include "hemlis.php";          // Innehåller lösenord till DB
-include "model_login.php";     // Denna fil
+include "hemlis.php";          
+include "model_login.php";    
 
-// Starta sessionen korrekt innan något annat händer
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Inkludera din header (den sköter DOCTYPE, html, head och den rosa menyn)
 include "header.php"; 
 ?>
 
