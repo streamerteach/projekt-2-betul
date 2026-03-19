@@ -25,10 +25,7 @@
 
         </section>
 
-        <footer>
-            Made by Dennis<sup>&#169;</sup>
-        </footer>
-
+       
     </div>
 </body>
 
